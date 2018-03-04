@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="web18@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="web18">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db2"/>
+    <schema id="4" parent="1" name="db3"/>
+    <schema id="5" parent="1" name="exam"/>
+    <schema id="6" parent="1" name="heima"/>
+    <schema id="7" parent="1" name="hibernatetest">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mydatabase"/>
+    <schema id="10" parent="1" name="myfirstdatabase"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="store_v2_1"/>
+    <schema id="14" parent="1" name="test"/>
+    <schema id="15" parent="1" name="web"/>
+    <schema id="16" parent="1" name="web13"/>
+    <schema id="17" parent="1" name="web14"/>
+    <schema id="18" parent="1" name="web15"/>
+    <schema id="19" parent="1" name="web161"/>
+    <table id="20" parent="2" name="province"/>
+    <table id="21" parent="2" name="user"/>
+    <table id="22" parent="7" name="t_customer"/>
+    <table id="23" parent="7" name="t_husband"/>
+    <table id="24" parent="7" name="t_idcard"/>
+    <table id="25" parent="7" name="t_order"/>
+    <table id="26" parent="7" name="t_user"/>
+    <table id="27" parent="7" name="t_wife"/>
+    <column id="28" parent="20" name="pid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="20" name="pname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="30" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="21" name="username">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="21" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="35" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="38" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="cardNum">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="41" parent="24" name="c_user_id">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="42" parent="24" name="FK85i9p6f9b2lyhuyddu12mgvxy">
+      <ColNames>c_user_id</ColNames>
+    </index>
+    <key id="43" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="24" name="FK85i9p6f9b2lyhuyddu12mgvxy">
+      <ColNames>c_user_id</ColNames>
+      <RefSchemaName>hibernatetest</RefSchemaName>
+      <RefTableName>t_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="45" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="46" parent="25" name="money">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="47" parent="25" name="receiverInfo">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="48" parent="25" name="c_customer_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="49" parent="25" name="FKg84l7xx2i9ht9314f17rpf35w">
+      <ColNames>c_customer_id</ColNames>
+    </index>
+    <key id="50" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="51" parent="25" name="FKg84l7xx2i9ht9314f17rpf35w">
+      <ColNames>c_customer_id</ColNames>
+      <RefSchemaName>hibernatetest</RefSchemaName>
+      <RefTableName>t_customer</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="52" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="26" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="54" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="57" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
